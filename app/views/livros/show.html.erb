@@ -1,0 +1,4 @@
+<%= render @livro, botao: render('shared/botao_voltar', rota: livros_path) do %>
+<%= link_to('Editar', edit_livro_path, class: 'nav-link') %>
+<%= link_to('Excluir', livro_path(@livro), class: 'nav-link', data: { turbo_method: :delete }) %>
+<% end %>

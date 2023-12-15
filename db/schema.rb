@@ -10,16 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_12_14_184509) do
+ActiveRecord::Schema[7.0].define(version: 2023_12_15_205228) do
   create_table "livros", force: :cascade do |t|
     t.string "titulo"
-    t.integer "genero"
+    t.string "genero"
     t.string "autor"
     t.string "editora"
     t.date "ano_publicacao"
     t.text "sinopse"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "lido", default: false
   end
 
 end

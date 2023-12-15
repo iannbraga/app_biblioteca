@@ -1,0 +1,27 @@
+<div class="card" style="width: 30rem;">
+    <div class="card-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col">
+                    <h5 class="card-title">
+                        <%= botao %>
+                        <%= livro.titulo %>
+                    </h5>
+                </div>
+                <div class="col-3 text-end">
+                    <%= render 'badge', helper: cor_status(livro.lido), texto: texto_status(livro.lido)  %>
+                </div>
+                <div class="col-12">
+                    <h6 class="card-subtitle mb-2 text-body-secondary"><%= livro.autor %></h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <%= render 'badge', helper: cor_genero(), texto: livro.genero %>
+        <p class="card-text"><%= livro.sinopse %></p>
+    </div>
+    <div class="card-footer d-flex justify-content-around">
+        <%= yield %>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-start">
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-3 g-4 mb-4">
+        <% @livros.each do |livro| %>
+            <div class="col d-flex justify-content-center">
+                <%= render livro, botao: nil  do %>
+                    <%= link_to('Visualizar', livro, class:  'nav-link') %>
+                <% end %>
+            </div>
+        <% end %>
+    </div>
+</div>
+<%= render 'shared/botao_flutuante', rota: new_livro_path, cor: 'outline-dark', titulo: '', icone: 'plus-lg' %>

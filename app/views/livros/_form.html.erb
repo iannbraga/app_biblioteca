@@ -1,0 +1,47 @@
+<div class="container-fluid w-75" style="min-width: 400px;">
+    <%= form_with(model: @livro) do |f| %>
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-6 p-2">
+                <%= f.label :titulo, 'Título', class: 'form-label' %>
+                <%= f.text_field :titulo, autofocus: true, class: 'form-control' %>
+            </div>
+            
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-2">
+                <%= f.label :ano_publicacao, 'Ano Publicação', class: 'form-label' %>
+                <%= f.date_field :ano_publicacao, autofocus: true, class: 'form-control', value: Date.today %>
+            </div>
+            <div class="col-12 col-sm-12 col-md-3 col-lg-3 p-2">
+                <ul class="list-unstyled">
+                    <li>
+                        <%= f.label :lido, 'Lido', class: 'form-check-label' %>
+                    </li>
+                    <li class="pt-2 fs-4">
+                        <%= f.check_box :lido, autofocus: true, class: 'form-check-input' %>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-2">
+                <%= f.label :genero, 'Gênero', class: 'form-label' %>
+                <%= f.text_field :genero, autofocus: true, class: 'form-control' %>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-2">
+                <%= f.label :autor, 'Autor', class: 'form-label' %>
+                <%= f.text_field :autor, autofocus: true, class: 'form-control' %>
+            </div>
+            <div class="col-12 col-sm-12 col-md-4 col-lg-4 p-2">
+                <%= f.label :editora, 'Editora', class: 'form-label' %>
+                <%= f.text_field :editora, autofocus: true, class: 'form-control' %>
+            </div>
+            <div class="col-12 p-2">
+                <%= f.label :sinopse, 'Sinopse', class: 'form-label' %>
+                <%= f.text_area :sinopse, autofocus: true, class: 'form-control', style: 'min-height: 200px' %>
+            </div>
+            <div class="col-6 text-center">
+                <%= render 'shared/botao_cadastrar', f: f %>
+            </div>
+            <div class="col-6 text-center">
+                <%= render 'shared/botao_cancelar', rota: livros_path %>
+            </div>
+        </div>
+    <% end %>
+</div>
