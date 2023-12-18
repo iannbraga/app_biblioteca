@@ -17,4 +17,6 @@ module LivrosHelper
     def texto_status(status)
         status ? 'Lido' : 'Não lido'
     end
+
+    
 end

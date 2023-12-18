@@ -1,13 +1,12 @@
-<header
-    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom p-5" >
-    <div class="col-md-3 mb-2 mb-md-0">
+<header class="d-flex justify-content-md-between py-3 mb-4 border-bottom p-5" >
+    <div class="mb-2 mb-md-0">
         <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
             <i class="bi bi-book-half fs-1"></i>
             <span class="fs-1">Biblioteca</span>
         </a>
     </div>
 
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+    <ul class="nav mb-2 justify-content-center mb-md-0">
         <li>
             <%= link_to 'Home', root_path, class: "nav-link px-2 #{link_ativo?(root_path)}" %>
         </li>
@@ -18,9 +17,4 @@
             <%= link_to 'Sobre nós', sobre_nos_path, class: "nav-link px-2 #{link_ativo?(sobre_nos_path)}" %>
         </li>
     </ul>
-
-    <div class="col-md-3 text-end">
-        <%# <button type="button" class="btn btn-outline-primary me-2">Login</button>
-        <button type="button" class="btn btn-primary">Sign-up</button> %>
-    </div>
 </header>

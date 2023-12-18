@@ -16,8 +16,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_12_15_205228) do
     t.string "genero"
     t.string "autor"
     t.string "editora"
-    t.date "ano_publicacao"
-    t.text "sinopse"
+    t.date "  ano_publicacao"
+    t.text "  sinopse"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean "lido", default: false

@@ -3,4 +3,7 @@
         Livros
     </h1>
     <%= render 'list_card', collection: @livros %>
+
+    <%= render 'shared/botao_flutuante', rota: new_livro_path, cor: 'outline-dark', titulo: '', icone: 'plus-lg' %>
 </div>
+
